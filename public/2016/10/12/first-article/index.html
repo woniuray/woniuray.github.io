@@ -1,0 +1,801 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="github hexo," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="本博客是采用github+hexo搭建的一个静态小站摘要  由于以前的域名空间到期了，想想还是搭建一个免费的博客。正好了解到github上有gh-pages
+这项功能，看到简洁的hexo-next主题心动了，因此就用它来搭建自己的博客。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github+hexo搭建网站">
+<meta property="og:url" content="http://woniuray.github.io/2016/10/12/first-article/index.html">
+<meta property="og:site_name" content="杂记">
+<meta property="og:description" content="本博客是采用github+hexo搭建的一个静态小站摘要  由于以前的域名空间到期了，想想还是搭建一个免费的博客。正好了解到github上有gh-pages
+这项功能，看到简洁的hexo-next主题心动了，因此就用它来搭建自己的博客。">
+<meta property="og:updated_time" content="2016-10-16T14:13:09.079Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Github+hexo搭建网站">
+<meta name="twitter:description" content="本博客是采用github+hexo搭建的一个静态小站摘要  由于以前的域名空间到期了，想想还是搭建一个免费的博客。正好了解到github上有gh-pages
+这项功能，看到简洁的hexo-next主题心动了，因此就用它来搭建自己的博客。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"right","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '4de64c2e14dceed93d09355125cc9ee0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://woniuray.github.io/2016/10/12/first-article/"/>
+
+
+  <title> Github+hexo搭建网站 | 杂记 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-85784891-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?401542be73705662c7730485500e8034";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">杂记</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">吾尝终日而思矣，不如须臾之所学也</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Github+hexo搭建网站
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-10-12T19:46:28+08:00" content="2016-10-12">
+              2016-10-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/github-hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">github hexo</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/12/first-article/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/12/first-article/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="本博客是采用github-hexo搭建的一个静态小站"><a href="#本博客是采用github-hexo搭建的一个静态小站" class="headerlink" title="本博客是采用github+hexo搭建的一个静态小站"></a>本博客是采用github+hexo搭建的一个静态小站</h1><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><pre><code>  由于以前的域名空间到期了，想想还是搭建一个免费的博客。正好了解到github上有gh-pages
+这项功能，看到简洁的hexo-next主题心动了，因此就用它来搭建自己的博客。 
+</code></pre><a id="more"></a>
+<h4 id="建站准备"><a href="#建站准备" class="headerlink" title="建站准备"></a>建站准备</h4><pre><code>1. github账号
+2. git
+3. Node.js
+4. hexo
+5. 多说账号
+</code></pre><h4 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h4><pre><code>2.1 安装git
+        2.1.1 Windows下安装git
+            从官网下载git安装包(默认安装即可)，下载地址：   https://git-for-windows.github.io
+        2.1.2 进入git bash进行设置
+            git config --global user.name &quot;yourname&quot;
+            git config --global user.email &quot;email@example.com&quot;
+        2.1.3 SSH Key
+            生成SSH Key
+                在git bash下：ssh-keygen -t rsa -C &quot;youremail@example.com&quot; (直接所有确定即可)
+                生成.shh目录和id_rsa(私钥)、id_rsa.pub(公钥)
+            添加SSH Key到github上
+                cd ~/.shh （进入.shh目录）
+                cat id_rsa.pub （查看公钥内容）
+                登录github，进入个人设置（Personal settings）
+                选择SSH and GPG keys
+                选择New SSH key 将id_rsa.pub的内容复制到里面即可
+2.2 安装Node.js
+        2.2.1 Windows下安装：
+            官网下载：   https://nodejs.org/en/download/ （默认安装即可）
+            测试是否成功cmd进入DOS环境输入node --version 检查node.js版本
+2.3 安装hexo博客框架
+        npm install -g hexo-cli  （前提是安装node.js）
+2.4 安装git插件
+        npm install hexo-deployer-git --save
+</code></pre><h4 id="github创建仓库"><a href="#github创建仓库" class="headerlink" title="github创建仓库"></a>github创建仓库</h4><pre><code>选择Create a new repository
+repository name命名规则: woniuray.github.io woniuray为随便起的内容,我的名字叫woniuray（其它默认创建即可）
+</code></pre><h4 id="博客创建"><a href="#博客创建" class="headerlink" title="博客创建"></a>博客创建</h4><pre><code>4.1 初始化
+        hexo init woniuray.github.io （woniuray.github.io为文件名）
+4.2 主题安装
+        默认主题是：landscape（无需安装），不想安装主题的可以跳过此步骤
+        我的主题是next，你也可以选择自己喜欢的主题进行安装
+        $ cd your-hexo-site
+        $ git clone https://github.com/iissnan/hexo-theme-next themes/next
+4.3 基础配置
+        4.3.1 站点配置
+            站点配置文件是在woniuray.github.io文件下的* _config.yml *文件
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: 杂记 //博客名字</div><div class="line">subtitle: 吾尝终日而思矣，不如须臾之所学也  //副标题</div><div class="line">description: &quot;学习==&gt;积累==&gt;进步&quot;   //博客描述</div><div class="line">author: woniuray   //作者名字</div><div class="line">language: zh-Hans  //网站语言中文</div><div class="line">timezone:          //时区设置默认</div><div class="line"># URL</div><div class="line">url: http://woniuray.github.io  //自己站点的域名</div><div class="line">root: /                         //站点目录</div><div class="line">theme: next                     //站点主题</div><div class="line">deploy:                                     </div><div class="line">  type: git                     //使用git发布</div><div class="line">  repository: https://github.com/woniuray/woniuray.github.io.git  //3步骤github创建的仓库</div><div class="line">  branch: master                 //分支</div></pre></td></tr></table></figure>
+
+        4.3.2 主题配置
+            主题配置文件为themes/next目录 _config.yml
+            主题默认配置即可
+</code></pre><h4 id="博客发布"><a href="#博客发布" class="headerlink" title="博客发布"></a>博客发布</h4><pre><code>5.1 博文创建
+    在woniuray.github.io目录下输入命令
+    $ hexo new &apos;文件名&apos; //会在source/_posts创建一个文件名.md文件
+5.2 博文编辑
+    编辑生成的.md文件(博文是用Markdown语法写的)
+    ---
+    title: new//博客标题
+    date: 2016-10-10 10:47:49 //创建时间
+    tags:  //分类标签
+    ---
+    正文（上面的---是必要的）
+5.3 博文预览
+    本地预览，执行命令：
+    $ hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）（简写 hexo s）
+    浏览器打开https://localhost:4000本地查看
+5.4 发布到github上
+    $ hexo clean
+    $ hexo generate #生成静态页面至public目录(简写 hexo g)
+    $ hexo deploy #将.deploy目录部署到GitHub(简写 hexo d)
+</code></pre><h4 id="增加评论功能"><a href="#增加评论功能" class="headerlink" title="增加评论功能"></a>增加评论功能</h4><pre><code>评论功能有自带的disqus，不过国内还是使用多说
+6.1 多说账号
+    由于多说是使用QQ、微博、微信、豆瓣、谷歌、百度等账号登录的，无需申请，直接登录即可
+    多说网址： http://duoshuo.com/ 点击我要安装
+    创建站点
+        站点名称：自己随便写
+        站点地址：自己站点的域名 例如：http://woniuray.github.io 
+        多说域名：自己写
+6.2 配置主题文件开启评论功能
+    在themes/next目录下打开 _config.yml，设置
+    duoshuo_shortname:  nanshanyi //上面多说域名中填的内容
+    需要分享的打开duoshuo_share: true 即可，支持分享到微博、QQ空间、微信
+</code></pre><h4 id="增加本地搜索功能"><a href="#增加本地搜索功能" class="headerlink" title="增加本地搜索功能"></a>增加本地搜索功能</h4><pre><code>7.1 安装hexo-generator-search插件
+    在博客目录下输入下面命令
+    $ npm install hexo-generator-search --save
+7.2 主题配置文件中增加
+    themes/next/_config.yml添加
+    search: 
+      path: search.xml
+      field: post
+</code></pre><h4 id="增加标签页、分类页"><a href="#增加标签页、分类页" class="headerlink" title="增加标签页、分类页"></a>增加标签页、分类页</h4><pre><code>8.1 命令创建
+    $ hexo new page tags //会在woniuray.github.io/source下创建tags文件夹内部是一个index.md和index文件夹
+    $ hexo new page categories  //同理
+8.2 站点配置文件配置
+    将menu：对应下的#去掉
+    menu:
+      home: /
+      categories: /categories
+      archives: /archives
+      tags: /tags
+</code></pre><h4 id="关于主题的使用"><a href="#关于主题的使用" class="headerlink" title="关于主题的使用"></a>关于主题的使用</h4><pre><code>更多关于本主题的使用请参考：http://theme-next.iissnan.com/
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/pay/weixinfukuan.png" alt="woniuray WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/uploads/pay/zhifubaofukuan.png" alt="woniuray Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/github-hexo/" rel="tag">#github hexo</a>
+          
+        </div>
+      
+
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <div class="ds-share flat" data-thread-key="2016/10/12/first-article/"
+     data-title="Github+hexo搭建网站"
+     data-content=""
+     data-url="http://woniuray.github.io/2016/10/12/first-article/">
+  <div class="ds-share-inline">
+    <ul  class="ds-share-icons-16">
+
+      <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+      <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+      <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+      <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+      <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+    </ul>
+    <div class="ds-share-icons-more">
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/12/first-article/"
+           data-title="Github+hexo搭建网站" data-url="http://woniuray.github.io/2016/10/12/first-article/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/avatar.jpg"
+               alt="woniuray" />
+          <p class="site-author-name" itemprop="name">woniuray</p>
+          <p class="site-description motion-element" itemprop="description">学习==>积累==>进步</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本博客是采用github-hexo搭建的一个静态小站"><span class="nav-number">1.</span> <span class="nav-text">本博客是采用github+hexo搭建的一个静态小站</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#摘要"><span class="nav-number">1.0.1.</span> <span class="nav-text">摘要</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建站准备"><span class="nav-number">1.0.1.1.</span> <span class="nav-text">建站准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装环境"><span class="nav-number">1.0.1.2.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#github创建仓库"><span class="nav-number">1.0.1.3.</span> <span class="nav-text">github创建仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客创建"><span class="nav-number">1.0.1.4.</span> <span class="nav-text">博客创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客发布"><span class="nav-number">1.0.1.5.</span> <span class="nav-text">博客发布</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加评论功能"><span class="nav-number">1.0.1.6.</span> <span class="nav-text">增加评论功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加本地搜索功能"><span class="nav-number">1.0.1.7.</span> <span class="nav-text">增加本地搜索功能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加标签页、分类页"><span class="nav-number">1.0.1.8.</span> <span class="nav-text">增加标签页、分类页</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于主题的使用"><span class="nav-number">1.0.1.9.</span> <span class="nav-text">关于主题的使用</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">woniuray</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"woniuray"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+
+</body>
+</html>
